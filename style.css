@@ -7,3 +7,42 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  deichild
 */
+
+/* Overall Site Tweaks - including WooCommerce */
+h1, h2, h3, h4, h5, h6 { font-family:"Monstserrat", sans-serif; }
+
+.woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Playfair Display", serif; }
+
+.panel {padding:.5rem 0rem; margin-bottom:unset; background-color:unset; border:unset; box-shadow:unset; -webkit-box-shadow:unset;  }
+
+/* Site Header Tweaks */
+.row.display-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
+.top-header {
+	border:none;
+	padding:1rem 0rem;
+}
+.top-header h4 {
+	margin:.5em 0em;
+}
+.nav-color .navbar {
+	padding:2rem 0rem;
+}
+
+/* Home Page Tweaks */
+.site-cta { background: url(img/cb-cta-bgnd.png) no-repeat center center / cover; }
+.site-cta { color:#FFF;  }
+.site-cta .container .row div { padding:2em 0em; }
+.site-cta .container .row div h2 { font-weight:400; margin:2rem 0rem; }
+.site-cta .container .row div img { margin:2rem 0rem; }
+
+
+/* Site Footer Tweaks */
+footer .teal-bg { padding:4rem 0rem; }
+footer .logo { padding:2em 0em; }
