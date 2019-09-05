@@ -1,6 +1,8 @@
 <?php 
 /*
 * Template Name:  Home Page Template
+*
+* DEI CurativaBay Child Theme - Index
 */
 get_header('home');
 // if a widget sidebar or custom sidebar exists, the col size is set to 8, or 12 if neither is true

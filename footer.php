@@ -1,3 +1,12 @@
+<?php
+/**
+ * DEI CurativaBay Child Theme - Footer
+ *
+ * Contains closing divs page layout and all footer content
+ *
+ * Duplicated from from original theme to include customizations as well as required components
+ */
+ ?>
 <footer id="site-footer" class="">
 	<div class="container-fluid">
 		<?php if ( is_active_sidebar( 'aside-footer' ) ) : ?>

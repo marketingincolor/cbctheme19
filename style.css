@@ -9,7 +9,7 @@
 */
 
 /* Overall Site Tweaks - including WooCommerce */
-h1, h2, h3, h4, h5, h6 { font-family:"Monstserrat", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 
 .woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Playfair Display", serif; }
 
@@ -42,6 +42,12 @@ h1, h2, h3, h4, h5, h6 { font-family:"Monstserrat", sans-serif; }
 .site-cta .container .row div h2 { font-weight:400; margin:2rem 0rem; }
 .site-cta .container .row div img { margin:2rem 0rem; }
 
+/* FAQ Page Tweaks */
+.faq-display { padding:4em 0em; }
+
+/* Site Reviews */
+.review-section .review { min-height:300px; }
+.review-section .review p { margin:0rem 2.4rem 1.4rem !important; line-height:1.4 !important; font-weight:500; font-size:16px; }
 
 /* Site Footer Tweaks */
 footer .teal-bg { padding:4rem 0rem; }

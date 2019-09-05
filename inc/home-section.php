@@ -1,27 +1,20 @@
 <style>
+.bottom-home-page {
+	background-image: url(<?php echo get_template_directory_uri(); ?>/img/gradient-img.jpg);
+}
+@media (min-width: 1200px) {
 	.bottom-home-page {
-		background-image: url(<?php echo get_template_directory_uri(); ?>/img/gradient-img.jpg);
+		background-image: url(<?php echo get_field('left_home_image');?>), url(<?php echo get_template_directory_uri(); ?>/img/gradient-img.jpg);
 	}
-	@media (min-width: 1200px) {
-		.bottom-home-page {
-			background-image: url(<?php echo get_field('left_home_image');?>), url(<?php echo get_template_directory_uri(); ?>/img/gradient-img.jpg);
-		}
-	}
+}
 
-	.home-page-testimonials-carousel h2.section-blurb,
-	.home-featured-products h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:700; margin:1em 0em; }
-	
-
-
-
-
-
+.home-page-testimonials-carousel h2.section-blurb,
+.home-featured-products h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:700; margin:1em 0em; }
 
 .col-centered {
     float: none;
     margin: 0 auto;
 }
-
 .carousel-control { 
     width: 8%;
     width: 0px;
@@ -35,24 +28,19 @@
     background-image: none;
     opacity: 1;
 }
-
 .carousel-control .fa.left { margin-left:-30px; font-size:64px; }
 .carousel-control .fa.right { margin-right:-30px; font-size:64px; }
-
 .carousel-control > a > span {
     color: black;
 	font-size: 29px !important;
 }
-
 .carousel-col { 
     position: relative; 
     min-height: 1px; 
     padding: 15px; 
     float: left;
  }
-
  .carousel-col .review p { margin:0rem 2.4rem 1.4rem; line-height:1.4; font-weight:500; font-size:16px; }
-
  .active > div { display:none; }
  .active > div:first-child { display:block; }
 

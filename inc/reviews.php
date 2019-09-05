@@ -1,8 +1,3 @@
-<style>
-	 .review { min-height:300px; }
-	 .review p { margin:0rem 2.4rem 1.4rem !important; line-height:1.4 !important; font-weight:500; font-size:16px; }
-</style>
-
 <section class="review-section">
 	<div class="container">
 	<div class="row">

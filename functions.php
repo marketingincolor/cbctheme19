@@ -1,7 +1,9 @@
 <?php
-//
-// Child Theme functions - with links to wordpress documentation on each
-//
+/*
+* Child Theme functions - with links to wordpress documentation on each
+*
+* 
+*/
 
 //add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 //function enqueue_parent_styles() {
