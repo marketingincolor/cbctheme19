@@ -9,7 +9,6 @@ get_header('home');
 ?>
 
 <main id="main-content" class="flex-grow child-theme">
-<?php get_template_part('inc/home-section' ); ?>
  <div class="container">
 				<?php
 					if ( have_posts() ) :
@@ -31,5 +30,6 @@ get_header('home');
 							get_template_part('inc/content', 'none' ); // 404 message
 						endif; ?>		
  </div><!--  .container -->
+<?php get_template_part('inc/home-section' ); ?>
 </main>
 <?php get_footer(); ?>

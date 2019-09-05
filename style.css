@@ -10,10 +10,24 @@
 
 /* Overall Site Tweaks - including WooCommerce */
 h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
-
 .woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Playfair Display", serif; }
-
 .panel {padding:.5rem 0rem; margin-bottom:unset; background-color:unset; border:unset; box-shadow:unset; -webkit-box-shadow:unset;  }
+
+/* Default Bootstrap 3 Overrides */
+.item { padding:unset; }
+@media (min-width: 768px) {
+  /* line 10, sass/bootstrap/_grid.scss */
+  .container { width: 750px; }
+}
+@media (min-width: 992px) {
+  /* line 10, sass/bootstrap/_grid.scss */
+  .container { width: 970px; }
+}
+@media (min-width: 1200px) {
+  /* line 10, sass/bootstrap/_grid.scss */
+  /* .container { width: 1170px; } */
+  .container { width: 1240px; }
+}
 
 /* Site Header Tweaks */
 .row.display-flex {
@@ -41,6 +55,85 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 .site-cta .container .row div { padding:2em 0em; }
 .site-cta .container .row div h2 { font-weight:400; margin:2rem 0rem; }
 .site-cta .container .row div img { margin:2rem 0rem; }
+
+.home-page-testimonials-carousel h2.section-blurb,
+.home-featured-products h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:700; margin:1em 0em; }
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+.carousel-control { 
+    width: 8%;
+    width: 0px;
+    color:black;
+    text-shadow:unset;
+}
+.carousel-control.left,
+.carousel-control.right { 
+    margin-right: auto; /*40px;*/
+    margin-left: auto; /*32px; */
+    background-image: none;
+    opacity: 1;
+}
+.carousel-control .fa.left { margin-left:-30px; font-size:64px; }
+.carousel-control .fa.right { margin-right:-30px; font-size:64px; }
+.carousel-control > a > span {
+    color: black;
+	font-size: 29px !important;
+}
+.carousel-col { 
+    position: relative; 
+    min-height: 1px; 
+    padding: 15px; 
+    float: left;
+ }
+ .carousel-col .review p { margin:0rem 2.4rem 1.4rem; line-height:1.4; font-weight:500; font-size:16px; }
+ .active > div { display:none; }
+ .active > div:first-child { display:block; }
+
+/*xs*/
+@media (max-width: 767px) {
+  .carousel-inner .active.left { left: -50%; }
+  .carousel-inner .active.right { left: 50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		     { left: -50%; }
+  .carousel-col                { width: 50%; }
+	.active > div:first-child + div { display:block; }
+}
+
+/*sm*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-inner .active.left { left: -50%; }
+  .carousel-inner .active.right { left: 50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		     { left: -50%; }
+  .carousel-col                { width: 50%; }
+	.active > div:first-child + div { display:block; }
+}
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-inner .active.left { left: -33%; }
+  .carousel-inner .active.right { left: 33%; }
+	.carousel-inner .next        { left:  33%; }
+	.carousel-inner .prev		     { left: -33%; }
+  .carousel-col                { width: 33%; }
+	.active > div:first-child + div { display:block; }
+  .active > div:first-child + div + div { display:block; }
+}
+
+/*lg*/
+@media (min-width: 1200px) {
+  .carousel-inner .active.left { left: -33%; }
+  .carousel-inner .active.right { left: 33%; }
+	.carousel-inner .next        { left:  33%; }
+	.carousel-inner .prev		     { left: -33%; }
+  .carousel-col                { width: 33%; }
+	.active > div:first-child + div { display:block; }
+  .active > div:first-child + div + div { display:block; }
+}
+
 
 /* FAQ Page Tweaks */
 .faq-display { padding:4em 0em; }

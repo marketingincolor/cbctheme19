@@ -33,7 +33,7 @@
 </div>
 
 <div class="nav-color">
-  <div class="container-fluid">
+  <div class="container not-fluid">
   	<nav class="navbar">
       <div class="navbar-header"> 
         <a class="hidden-xs hidden-sm navbar-brand" href="<?php echo esc_url( home_url( '/' ) );?>" rel="home" itemprop="url">

@@ -1,3 +1,8 @@
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+
+
 <?php
 // Slider for post type 'slide' 
 $gallery = get_field('choose_slide_gallery');
@@ -35,3 +40,8 @@ $tax_query = $gallery ? array(array('taxonomy'=>'slide-gallery','field'=>'slug',
       <a class="right carousel-control" href="#motion" role="button" data-slide="next"><span class="right fa fa-angle-right"></span></a>
     	<?php endif; ?>
 </div><!-- /.carousel -->   
+
+
+</div>
+</div>
+</div>

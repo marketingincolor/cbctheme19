@@ -13,7 +13,7 @@ $mainWidth = $sidebarActive ? 8 : 12;
 // if a widget sidebar or custom sidebar exists, the col size is set to 8, or 12 if neither is true
 ?>
 <main id="main-content" class="flex-grow">
- <div class="container-fluid">
+ <div class="container NOT-fluid">
 	<div class="row">
 		<section class="col-md-<?php echo $mainWidth; ?>">
 				<?php
