@@ -8,7 +8,7 @@
 						<div class="review">
 
 							<p class="logo-circle"><img src="<?php echo get_template_directory_uri(); ?>/img/curativa-circle.jpg" alt="Curativa"></p>
-							<p><?php echo the_sub_field('blurb'); //echo the_sub_field('testimonial_content');?></p>
+							<p>&quot;<?php echo the_sub_field('blurb');?>&quot;</p>
 							<p style="font-weight: bold;"><?php echo the_sub_field('customer_name');?></p>
 							<!-- <p><a href="<?php echo the_sub_field('read_more_link');?>" target="_blank" >Read More</a></p> -->
 							<a href="#" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>

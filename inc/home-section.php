@@ -5,8 +5,7 @@
 				<h2 class="section-blurb">This section is populated via the WooCommerce product_categories shortcode, and this text is hard coded on the page</h2>
 			</div>
 			<div class="col-sm-12">
-<?php echo do_shortcode('[product_categories columns="3" number="0" parent="0"]'); ?>
-
+				<?php echo do_shortcode('[product_categories columns="3" number="0" parent="0"]'); ?>
 			</div>
 		</div>
 	</div>
@@ -71,30 +70,29 @@
 				<h2 class="section-blurb">Read What Our Customers Have to Say</h2>
 			</div>
 			<div class="col-xs-11 col-md-10 col-centered">
-				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="5400">
+
+				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="5000">
 					<div class="carousel-inner">
 					<?php 
 					if( have_rows('testimonial', $testimonial_id) ):
 						$i=0;
 						while ( have_rows('testimonial', $testimonial_id) ) : the_row();?>
 						<div class="item <?php if($i==0) { $i=1; echo 'active'; } ?>">
-							<div class="carousel-col">
+							<div class="carousel-col testimonial-<?php echo $testimonial_id;?>">
 							<div class="review">
-								<!-- <h4><?php echo the_sub_field('blurb');?></h4> -->
 								<p class="logo-circle"><img src="<?php echo get_template_directory_uri(); ?>/img/curativa-circle.jpg" alt="Curativa" style="max-width:100px; display:inline-block;"></p>
-								<p><?php echo the_sub_field('testimonial_content');?></p>
+								<p>&quot;<?php echo the_sub_field('blurb');?>&quot;</p>
 								<p><?php echo the_sub_field('customer_name');?></p>
-								<p><a href="<?php echo the_sub_field('read_more_link');?>" target="_blank" >Read More</a></p>
+								<a href="#" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>
 							</div>
 							</div>
 						</div>
 					<?php endwhile;
 					else :
-			    // no rows found
-						endif;
+			    		// no rows found
+					endif;
 					?>	
 					</div>
-
 					<!-- Controls -->
 					<div class="left carousel-control">
 						<a href="#carousel" role="button" data-slide="prev">
@@ -111,6 +109,33 @@
 						</a>
 					</div>
 				</div>
+
+			<?php 
+			if( have_rows('testimonial', $testimonial_id) ):
+				$i=0;
+				while ( have_rows('testimonial', $testimonial_id) ) : the_row();?>
+				<!-- The modal -->
+				<div class="modal fade" id="review-<?php echo get_row_index(); ?>" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="modalLabelLarge"><?php echo the_sub_field('blurb');?></h4>
+							</div>
+							<div class="modal-body">
+								<?php echo the_sub_field('testimonial_content');?>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endwhile;
+			else :
+		    	// no rows found
+			endif;
+			?>	
+
 			</div>
 		</div>
 	</div>

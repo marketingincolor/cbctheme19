@@ -18,3 +18,4 @@ function get_id_by_slug($page_slug) {
 		return null;
 	}
 }
+

@@ -50,6 +50,16 @@
       </div>
       <div class="navbar-collapse collapse">
         <?php wp_nav_menu( array(
+          'theme_location'  => 'cart',
+          'menu_class'    =>  'nav navbar-nav',
+          'container'       => '',
+          'depth'     =>  0,
+          'fallback_cb' =>  false,
+          'walker'      =>  new dei_Nav_Walker
+          )); 
+         // see 'inc/nav-walker.php' to alter output.  Default uses the title as the font-awesome icon class, the fa- is already added
+          ?>
+        <?php wp_nav_menu( array(
            'theme_location'	=> 'primary',
            'menu_class'		=>	'nav navbar-nav',
            'container'       => '',
@@ -58,7 +68,9 @@
            'walker'			=>	new dei_Nav_Walker
            )); // generates the ul
           ?>
+
       </div><!--/.navbar-collapse -->
+
   	</nav><!-- navbar -->
   </div>
 </div>
