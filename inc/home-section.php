@@ -1,9 +1,6 @@
 <section class="home-featured-products">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1 text-center">
-				<h2 class="section-blurb">This section is populated via the WooCommerce product_categories shortcode, and this text is hard coded on the page</h2>
-			</div>
 			<div class="col-sm-12">
 				<?php echo do_shortcode('[product_categories columns="3" number="0" parent="0"]'); ?>
 			</div>
@@ -81,7 +78,7 @@
 							<div class="carousel-col testimonial-<?php echo $testimonial_id;?>">
 							<div class="review">
 								<p class="logo-circle"><img src="<?php echo get_template_directory_uri(); ?>/img/curativa-circle.jpg" alt="Curativa" style="max-width:100px; display:inline-block;"></p>
-								<p>&quot;<?php echo the_sub_field('blurb');?>&quot;</p>
+								<p class="quote"><?php echo the_sub_field('blurb');?></p>
 								<p><?php echo the_sub_field('customer_name');?></p>
 								<a href="#" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>
 							</div>
@@ -176,3 +173,75 @@ jQuery('.carousel[data-type="multi"] .item').each(function() {
 </section> -->
 
 <?php get_template_part('inc/primary-cta' ); ?>
+
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+
+<?php $testvid = "ScMzIvxBSi4"; ?>
+<script>
+	// Output from plugin onto page using 'wp_add_inline_script' to JS file below
+var video_id = "<?php echo $testvid; ?>",video_mute = true,video_volume = 50;
+
+// JS file
+var player;
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtube-header-player', {
+        videoId: video_id,
+        playerVars: {
+            playlist: video_id,
+            loop: 1
+        },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+function onPlayerReady(event) {
+    event.target.playVideo();
+    if(video_mute){
+        player.mute();
+    } else {
+        player.setVolume(video_volume);
+    }
+}
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        player.playVideo(); 
+    }
+}
+</script>
+
+<style>
+.video-wrapper{width: 100%;overflow: hidden;position: relative;}
+.video-container {position: absolute;width: auto;top: -50%;left: 0;right: 0;bottom: -50%;}
+.video-bg {background: none;position: absolute;top: 0;right: 0;bottom: 0;left: 0;z-index: 1;}
+.video-bg .video-fg,
+.video-bg iframe,
+.video-bg video {position: absolute;top: 0;left: 0 !important;width: 100% !important;height: 100%;}
+.video-wrapper{height: 400px;}
+.video-container {height: 800px;}
+@media (min-width: 768px) and (max-width: 991px) {
+    .video-wrapper{height: 300px;}
+    .video-container {height: 600px;}
+}
+@media (max-width:767px) {
+    .video-wrapper{height: 200px;}
+    .video-container {height: 400px;}
+}
+</style>
+
+<div class="video-wrapper">
+    <div class="video-container">
+        <div class="video-bg">
+            <div class="video-fg" id="youtube-header-player"></div>
+        </div>
+    </div>
+</div>

@@ -25,6 +25,7 @@ $tax_query = $gallery ? array(array('taxonomy'=>'slide-gallery','field'=>'slug',
 					)); // 'slide-gallery' => optionally add the slug of a specific gallery to the 'slide-gallery'  
 			if ($slide_query->have_posts()) : while ($slide_query->have_posts()) : $slide_query->the_post(); ?>
 	        <div class="item <?php echo $firstClass; ?>" id="slide<?php echo $slideId ?>">
+	        			<?php set_query_var( 'slideId', $slideId); ?>
 						<?php get_template_part('inc/content-slide'); ?>
 	        </div><!--  item -->
 			<?php 

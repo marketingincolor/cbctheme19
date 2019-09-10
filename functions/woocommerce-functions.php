@@ -35,7 +35,7 @@ function dei_output_content_wrapper(){
 
 	echo 
 	'<main id="main-content" class="flex-grow">
-	<div class="container-fluid">
+	<div class="container not-fluid">
 		<div class="row">';
 
 			if ( $sidebarActive ) { get_sidebar();}

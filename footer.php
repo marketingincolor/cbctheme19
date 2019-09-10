@@ -83,7 +83,7 @@
 						'theme_location'	=> 'icons',
 						'menu_class'		=>	'icon-nav list-inline',
 						'container'       => 'nav',
-						'container_class' => 'social-media col-xs-12 text-center',
+						'container_class' => 'social-media col-xs-12 text-right',
 						'depth'			=>	0,
 						'fallback_cb'	=>	false,
 						'walker'			=>	new icon_Nav_Walker

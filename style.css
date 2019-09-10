@@ -10,8 +10,14 @@
 
 /* Overall Site Tweaks - including WooCommerce */
 h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
-.woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Playfair Display", serif; }
+
 .panel {padding:.5rem 0rem; margin-bottom:unset; background-color:unset; border:unset; box-shadow:unset; -webkit-box-shadow:unset;  }
+.space-0-2 { padding:0em 2em; }
+
+
+.woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Playfair Display", serif; }
+.woocommerce .product-category .cat-rel .category_description p,
+.woocommerce .product-category .cat-rel p.view-all-link { font-weight:500; }
 
 /* Default Bootstrap 3 Overrides */
 .item { padding:unset; }
@@ -40,7 +46,7 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 }
 .top-header {
 	border:none;
-	padding:1rem 0rem;
+	padding:unset;
 }
 .top-header h4 {
 	margin:.5em 0em;
@@ -58,15 +64,24 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 #menu-cart-1 li:last-child a { padding-right:0px; }
 #menu-main-menu li:last-child a { padding-right:2em; }
 
+.btn-secondary {
+	color: white;
+    background-color: #ff6d70;
+    border-color: #ff5457;
+    font-weight: 500;
+}
+
 /* Home Page Tweaks */
 .site-cta { background: url(img/cb-cta-bgnd.png) no-repeat center center / cover; }
 .site-cta { color:#FFF;  }
 .site-cta .container .row div { padding:2em 0em; }
-.site-cta .container .row div h2 { font-weight:400; margin:2rem 0rem; }
+.site-cta .container .row div h2 { font-weight:600; margin:2rem 0rem; }
 .site-cta .container .row div img { margin:2rem 0rem; }
 
+.home-page-testimonials-carousel { padding:0em 0em 3em; }
 .home-page-testimonials-carousel h2.section-blurb,
-.home-featured-products h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:700; margin:1em 0em; }
+.home-featured-products h2.section-blurb,
+h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:600; margin:1em 0em; }
 
 .col-centered {
     float: none;
@@ -97,10 +112,35 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
     padding: 15px; 
     float: left;
  }
- .carousel-col .review { min-height:240px; }
- .carousel-col .review p { margin:0rem 2.4rem 1.4rem; line-height:1.4; font-weight:500; font-size:16px; }
- .active > div { display:none; }
- .active > div:first-child { display:block; }
+ .carousel-col .review { min-height:240px; font-weight:600; font-size:16px; }
+ .carousel-col .review p { margin:0rem 2.4rem 1.4rem; line-height:1.4; font-weight:600; font-size:16px; }
+
+.carousel-caption {
+	height:100%;
+	left: 0;
+    background: rgba(109,178,172,0.85);
+    width: 42%;
+    right: unset;
+    padding-bottom: unset;
+    bottom: 0;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+ 
+.home-page-testimonials-carousel .active > div { display:none; }
+.home-page-testimonials-carousel .active > div:first-child { display:block; } 
 
 /*xs*/
 @media (max-width: 767px) {
@@ -151,7 +191,12 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 /* Site Reviews */
 .review-section .review { min-height:300px; }
 .review-section .review p { margin:0rem 2.4rem 1.4rem !important; line-height:1.4 !important; font-weight:500; font-size:16px; }
+.review-section .review p.quote { margin-top:2em !important; }
 
 /* Site Footer Tweaks */
-footer .teal-bg { padding:4rem 0rem; }
+footer .teal-bg { padding:4em 0em; }
 footer .logo { padding:2em 0em; }
+footer .top-footer a { font-weight:500; font-size:22px; }
+footer .copyright { padding-top:1.5em; }
+footer .copyright div { padding-bottom:.5em; }
+footer #menu-terms-1 li a { font-size:18px; font-weight:inherit; }
