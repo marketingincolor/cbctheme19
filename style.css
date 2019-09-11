@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 #menu-cart-1 li:last-child a { padding-right:0px; }
 #menu-main-menu li:last-child a { padding-right:2em; }
 
-.btn-secondary {
+.btn-secondary, .btn-secondary:hover {
 	color: white;
     background-color: #ff6d70;
     border-color: #ff5457;
@@ -118,12 +118,15 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
 .carousel-caption {
 	height:100%;
 	left: 0;
-    background: rgba(109,178,172,0.85);
-    width: 42%;
-    right: unset;
-    padding-bottom: unset;
-    bottom: 0;
+  background: rgba(109,178,172,0.85);
+  width: 42%;
+  right: unset;
+  padding-bottom: unset;
+  bottom: 0;
+  text-align:left;
+  text-shadow:none;
 }
+.carousel-caption h3 { font-weight:300; text-shadow:none; margin-top:2em; margin-bottom:1em; }
 
 .videoWrapper {
 	position: relative;
