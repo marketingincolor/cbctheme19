@@ -68,7 +68,7 @@
 			</div>
 			<div class="col-xs-11 col-md-10 col-centered">
 
-				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="5000">
+				<div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000" data-pause="hover">
 					<div class="carousel-inner">
 					<?php 
 					if( have_rows('testimonial', $testimonial_id) ):
@@ -140,19 +140,21 @@
 
 <script>
 jQuery('.carousel[data-type="multi"] .item').each(function() {
-	var next = jQuery(this).next();
-	if (!next.length) {
-		next = jQuery(this).siblings(':first');
-	}
-	next.children(':first-child').clone().appendTo(jQuery(this));
-
-	for (var i = 0; i < 2; i++) {
-		next = next.next();
+	$windowWidth = jQuery( window ).width();
+	if ($windowWidth > 767 ) {
+		var next = jQuery(this).next();
 		if (!next.length) {
 			next = jQuery(this).siblings(':first');
 		}
-
 		next.children(':first-child').clone().appendTo(jQuery(this));
+
+		for (var i = 0; i < 2; i++) {
+			next = next.next();
+			if (!next.length) {
+				next = jQuery(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo(jQuery(this));
+		}
 	}
 });
 </script>
