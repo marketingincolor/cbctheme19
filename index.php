@@ -49,6 +49,9 @@ $mainWidth = $sidebarActive ? 8 : 12;
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
+				<h2 class="section-blurb" style="text-align:center;">Featured Products</h2>
+			</div>
+			<div class="col-sm-12">
 			<?php echo do_shortcode('[products limit="3" columns="3" class="custom-product-1"]'); ?>
 			</div>
 		</div>

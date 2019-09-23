@@ -7,11 +7,11 @@
 			<div class="col-sm-6 col-lg-4">
 						<div class="review">
 
-							<p class="logo-circle"><img src="<?php echo get_template_directory_uri(); ?>/img/curativa-circle.jpg" alt="Curativa"></p>
+							<p class="logo-circle"><img src="<?php echo get_stylesheet_directory_uri();; ?>/img/testimonial-icon.jpg" alt="Curativa" style="max-width:100px;"></p>
 							<p class="quote"><?php echo the_sub_field('blurb');?></p>
 							<p style="font-weight: bold;"><?php echo the_sub_field('customer_name');?></p>
 							<!-- <p><a href="<?php echo the_sub_field('read_more_link');?>" target="_blank" >Read More</a></p> -->
-							<a href="#" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>
+							<a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>
 
 							<!-- The modal -->
 							<div class="modal fade" id="review-<?php echo get_row_index(); ?>" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">

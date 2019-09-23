@@ -21,15 +21,14 @@
 		padding:3em 0em;
 	}
 	.salon-green-cta p {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 22px;
     line-height: 1.5;
 	}
 	.green-frame {
-		border-top:5px solid #B6EBE6;
-		border-bottom:5px solid #B6EBE6;
+		margin:6%;
 	}
-	.green-frame h2 { color:#66a9a3; font-size:1.5em; margin:2em 0em 1em; }
+	.green-frame h2 { color:#66a9a3; font-size:1.5em; margin:3em 0em 1em; }
 	.hero-salon-page {
 		background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/salon-page-hero-bgnd.png);
 		background-repeat: repeat;
@@ -62,6 +61,9 @@
 	.salon-form {
 		background-color:#ACADAD;
 	}
+	.form-group { margin-bottom:40px; }
+	.wpcf7 label { font-weight:500; }
+	.form-control { font-size:14px !important; font-weight:500; color:#b5b5b5; }
 	</style>
 
 
@@ -113,9 +115,14 @@
 	</div>
 </section>
 
-<div class="salon-form text-center">
+<div class="salon-form">
 	<div class="container"><a id="salon-form"></a>
-		<h3>INSERT FORM SHORTCODE HERE</h3>
-		<?php echo do_shortcode('[contact-form-7 id="1480" title="Salon Form"]'); ?>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+				<h3 style="padding:4rem 0rem 2rem;">Spa/Salon Business Partner Application</h3>
+				<?php echo do_shortcode('[contact-form-7 id="1480" title="Salon Form"]'); ?>
+			</div>
+		</div>
+
 	</div>
 </div>

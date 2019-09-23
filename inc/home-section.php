@@ -77,10 +77,10 @@
 						<div class="item <?php if($i==0) { $i=1; echo 'active'; } ?>">
 							<div class="carousel-col testimonial-<?php echo $testimonial_id;?>">
 							<div class="review">
-								<p class="logo-circle"><img src="<?php echo get_template_directory_uri(); ?>/img/curativa-circle.jpg" alt="Curativa" style="max-width:100px; display:inline-block;"></p>
+								<p class="logo-circle"><img src="<?php echo get_stylesheet_directory_uri();; ?>/img/testimonial-icon.jpg" alt="Curativa" style="max-width:100px; display:inline-block;"></p>
 								<p class="quote"><?php echo the_sub_field('blurb');?></p>
 								<p><?php echo the_sub_field('customer_name');?></p>
-								<a href="#" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>
+								<a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#review-<?php echo get_row_index(); ?>">Read More</a>
 							</div>
 							</div>
 						</div>

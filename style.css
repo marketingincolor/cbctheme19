@@ -10,27 +10,87 @@
 
 /* Overall Site Tweaks - including WooCommerce */
 h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
+h3, .h3 { font-size: 1.75em; }
 
-.panel {padding:.5rem 0rem; margin-bottom:unset; background-color:unset; border:unset; box-shadow:unset; -webkit-box-shadow:unset;  }
+body { background-color:#fbfbfb; }
+.panel {padding:1.5rem 0rem; margin-bottom:unset; background-color:unset; border:unset; box-shadow:unset; -webkit-box-shadow:unset;  }
+article { margin-bottom:2em; }
 .space-0-2 { padding:0em 2em; }
+#logo-mobile img { max-width:80%; padding:.5em 0em; }
 
-
-.woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Playfair Display", serif; }
+.woocommerce h1, .woocommerce .h1, .woocommerce h2, .woocommerce .h2 { font-family: "Montserrat", serif; margin-top:1em; margin-bottom:.5em; }
 .woocommerce .product-category .cat-rel .category_description p,
-.woocommerce .product-category .cat-rel p.view-all-link { font-weight:500; }
+.woocommerce .product-category .cat-rel p.view-all-link { font-weight:600; }
+.woocommerce .product-category .cat-rel .category_description p { margin-bottom:0.25em !important; }
+.woocommerce .product-category .cat-rel h2 { font-size: 2.5rem; margin-bottom:0.25em !important; }
+.woocommerce .product-category .cat-rel { padding:2.5rem 2rem; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { text-align: left; padding:0em 2em;}
+.woocommerce ul.products li.product-category { text-align: left; padding:unset;}
+.woocommerce-result-count { display:none; }
+.woocommerce-products-header { text-align:center; }
+.woocommerce .woocommerce-breadcrumb { margin:0em 0em 3em; text-align:center; }
+.woocommerce .woocommerce-ordering { float:none; text-align:center; padding-bottom:2em; }
+.woocommerce .woocommerce-ordering select { font-size: 16px; font-weight: 500; color:#b5b5b5; }
+.woocommerce .related { text-transform:capitalize; }
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus, 
+ul.tabs > li.active > a, 
+ul.tabs > li.active > a:hover, 
+ul.tabs > li.active > a:focus { color: #ffffff; background-color: #a9a9a9; }
+
+.woocommerce-tabs .nav > li > a:hover, 
+.woocommerce-tabs .nav > li > a:focus, 
+.woocommerce-tabs ul.tabs > li > a:hover, 
+.woocommerce-tabs ul.tabs > li > a:focus { color: #ffffff; background-color: #a9a9a9; }
+
+.woocommerce-tabs .nav-tabs > li > a, 
+.woocommerce-tabs ul.tabs > li > a { margin-right: 2px; line-height: 1.42857; border: 1px solid #ddd; }
+
+#main-content p, .entry-content p, .entry-summary p, .comment-content p, .mu_register p { margin: 0 0 24px; margin: 0 0 1.75rem; }
+
+ul.product-tags { justify-content:center; display:flex; flex-wrap:wrap; margin:0 auto 1em; padding:0; list-style:none outside; width:auto; text-align:center;  }
+ul.product-tags li { /*margin:auto;*/ padding:.25em;  }
+
+.btn, .button, #respond input#submit {
+display: inline-block;
+margin-bottom: 0;
+font-weight: normal !important;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 0px solid transparent;
+white-space: nowrap;
+position: relative;
+padding: 0.5rem 1.75rem;
+font-size: 14px;
+line-height: 1.42857 !important;
+border-radius: 10px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+
+.modal-header { padding: 30px 20px; }
+.modal-body { padding: 35px 35px; }
+.modal-dialog { margin: 20vh auto auto; }
+
+.review { border:3px solid #dddddd; }
+
+.cat-banner { max-height: 300px; }
 
 /* Default Bootstrap 3 Overrides */
 .item { padding:unset; }
 @media (min-width: 768px) {
-  /* line 10, sass/bootstrap/_grid.scss */
   .container { width: 750px; }
 }
 @media (min-width: 992px) {
-  /* line 10, sass/bootstrap/_grid.scss */
   .container { width: 970px; }
+  .nav-color { background-color:#fbfbfb; }
 }
 @media (min-width: 1200px) {
-  /* line 10, sass/bootstrap/_grid.scss */
   /* .container { width: 1170px; } */
   .container { width: 1240px; }
 }
@@ -49,10 +109,7 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 	padding:unset;
 }
 .top-header h4 {
-	margin:.5em 0em;
-}
-.nav-color .navbar {
-	padding:2rem 0rem;
+	margin:1em 0em;
 }
 
 .nav > li > a, ul.tabs > li > a { padding:1em .65em; }
@@ -61,6 +118,10 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 .navbar-nav > li > a > i { font-size:20px; color:#ff6d70; }
 .navbar-nav > li.current-menu-item > a { border-bottom: none; }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus { border-bottom: none; }
+.nav-color .navbar { padding:1.5rem 0rem; }
+.navbar-toggle .icon-bar { background-color:#fff; width:24px; height:2px; }
+.navbar-toggle .icon-bar + .icon-bar { margin-top: 5px; }
+
 #menu-cart-1 li:last-child a { padding-right:0px; }
 #menu-main-menu li:last-child a { padding-right:2em; }
 
@@ -71,6 +132,11 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
     font-weight: 500;
 }
 
+#searchform { padding: 4rem 0; width: 50%; margin: auto; }
+#searchform .form-control { border-radius: 5px; }
+#searchform .form-group button { color:#ccc; }
+#searchform input::placeholder { color:#ccc; }
+
 /* Home Page Tweaks */
 .site-cta { background: url(img/cb-cta-bgnd.png) no-repeat center center / cover; }
 .site-cta { color:#FFF;  }
@@ -78,11 +144,13 @@ h1, h2, h3, h4, h5, h6 { font-family:"Montserrat", sans-serif; }
 .site-cta .container .row div h2 { font-weight:600; margin:2rem 0rem; }
 .site-cta .container .row div img { margin:2rem 0rem; }
 
+.home-featured-products { padding: 0rem 0; }
 .home-page-testimonials-carousel { padding:0em 0em 3em; }
 .home-page-testimonials-carousel h2.section-blurb,
 .home-featured-products h2.section-blurb,
-h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:600; margin:1em 0em; }
-
+h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:600; margin:1.5em 2em; }
+.home-page-testimonials-carousel h2.section-blurb { margin:0em 2em 1.5em; }
+h2.title-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-size:1.75em; font-weight:600; }
 .col-centered {
     float: none;
     margin: 0 auto;
@@ -90,7 +158,7 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
 .carousel-control { 
     width: 8%;
     width: 0px;
-    color:black;
+    color:#888;
     text-shadow:unset;
 }
 .carousel-control.left,
@@ -100,12 +168,15 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
     background-image: none;
     opacity: 1;
 }
-.carousel-control .fa.left { margin-left:-30px; font-size:64px; }
-.carousel-control .fa.right { margin-right:-30px; font-size:64px; }
+.carousel-control .fa.left { margin-left:-30px; font-size:32px; }
+.carousel-control .fa.right { margin-right:-30px; font-size:32px; }
 .carousel-control > a > span {
-    color: black;
+    color: #888;
 	font-size: 29px !important;
 }
+.carousel-control:hover, .carousel-control:focus { color:#888; }
+.carousel-indicators { display:none; }
+
 .carousel-col { 
     position: relative; 
     min-height: 1px; 
@@ -126,8 +197,8 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
   text-align:left;
   text-shadow:none;
 }
-.carousel-caption h3 { font-weight:300; text-shadow:none; margin-top:2em; margin-bottom:1em; }
-
+.carousel-caption h3 { font-weight:600; text-shadow:none; margin-top:2em; margin-bottom:1em; }
+.carousel-caption p { font-weight:500; }
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -152,11 +223,18 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
 	.carousel-inner .next        { left:  100%; }
 	.carousel-inner .prev		     { left: -100%; }
   .carousel-col                { width: 100%; }
+  .carousel-caption { position:relative; width:initial; padding-bottom:.25em; text-align:center; }
+  .carousel-caption h3 { margin-top:0em; margin-bottom:0.5em; font-size:1.25em; }
 	.active > div:first-child + div { display:block; }
   .navbar-nav > li > a > .fa-home { font-size:20px; color:#fff; }
   .navbar-nav > li > a > i { font-size:20px; color:#fff; }
   .navbar-nav > li.current-menu-item > a { color: #000; }
   .logo-circle {display:unset; top:0px;}
+  .woocommerce .product-category .cat-rel { text-align:center; }
+  .navbar-toggle { float:none; margin:auto; display:inherit; }
+  .navbar-collapse { text-align: center; }
+  #menu-main-menu li:last-child a { padding-right:.65em; }
+  .panel { padding:3rem 0rem; }
 }
 
 /*sm*/
@@ -166,11 +244,18 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
 	.carousel-inner .next        { left:  50%; }
 	.carousel-inner .prev		     { left: -50%; }
   .carousel-col                { width: 50%; }
+  .carousel-caption { position:absolute; width:42%; padding-bottom:unset; text-align:inherit; }
+  .carousel-caption h3 { margin-top:2em; margin-bottom:1em; font-size:1.75em; }
 	.active > div:first-child + div { display:block; }
   .navbar-nav > li > a > .fa-home { font-size:20px; color:#fff; }
   .navbar-nav > li > a > i { font-size:20px; color:#fff; }
   .navbar-nav > li.current-menu-item > a { color: #000; }
   .logo-circle {display:unset; top:0px;}
+  .woocommerce .product-category .cat-rel { text-align:inherit; }
+  .navbar-toggle { display:none; }
+  .navbar-collapse { text-align: inherit; }
+  #menu-main-menu li:last-child a { padding-right:2em; }
+  .panel { padding:1.5rem 0rem; }
 }
 
 /*md*/
@@ -202,9 +287,13 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
 
 /* FAQ Page Tweaks */
 .faq-display { padding:4em 0em; }
+.faq-display h2 { font-size:1.75em; }
+.faq-display .faq-group { margin-bottom:3em; }
+/*.faq-display .faq-group .panel h5 a:after { content:"\23F7"; color:#ff6d70;}*/
+.faq-display .down { color:#ff6d70;}
 
 /* Site Reviews */
-.review-section .review { min-height:300px; }
+.review-section .review { min-height:250px; }
 .review-section .review p { margin:0rem 2.4rem 1.4rem !important; line-height:1.4 !important; font-weight:500; font-size:16px; }
 .review-section .review p.quote { margin-top:2em !important; }
 
@@ -212,6 +301,6 @@ h2.section-blurb { font-family:"Montserrat", sans serif; color:#6db2ac; font-siz
 footer .teal-bg { padding:4em 0em; }
 footer .logo { padding:2em 0em; }
 footer .top-footer a { font-weight:500; font-size:22px; }
-footer .copyright { padding-top:1.5em; }
+footer .copyright { padding-top:1.5em; font-size:16px; font-weight:500; }
 footer .copyright div { padding-bottom:.5em; }
-footer #menu-terms-1 li a { font-size:18px; font-weight:inherit; }
+footer #menu-terms-1 li a { font-size:16px; font-weight:500; }
